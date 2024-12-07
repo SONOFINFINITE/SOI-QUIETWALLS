@@ -1,0 +1,69 @@
+import classNames from 'classnames';
+import styles from './hero.module.scss';
+import { Header } from '../header/header';
+import backgroundVideo from '../../assets/tbs_Homepage_header_lores.mov';
+import { useEffect, useRef } from 'react';
+
+export interface HeroProps {
+    className?: string;
+}
+
+export const Hero = ({ className }: HeroProps) => {
+    const videoRef = useRef<HTMLVideoElement>(null);
+
+    useEffect(() => {
+        const video = videoRef.current;
+        if (video) {
+            video.play().catch((error) => {
+                console.error('Error playing video:', error);
+            });
+        }
+    }, []);
+
+    return (
+        <section id="hero" className={styles.hero}>
+            <video
+                ref={videoRef}
+                className={styles.hero__background}
+                autoPlay
+                muted
+                loop
+                playsInline
+                src={backgroundVideo}
+                onError={(e) => console.error('Video error:', e)}
+            />
+            <div className={styles.hero__overlay}></div>
+            <Header />
+            <div className={styles['hero__content-wrapper']}>
+                <div className={styles.hero__text_container}>
+                    <p className={styles.hero__prefix}>АРХИТЕКТУРНЫЙ ТЕКСТИЛЬ</p>
+                    <div className={styles.hero__text_block}>
+                        <h2 className={styles['hero__main-text-lead']}>ТИХИЕ СТЕНЫ</h2>
+                    </div>
+                    <p className={styles.hero__postfix}>ДЛЯ ФИНИШНОЙ ОТДЕЛКИ СТЕН И ПОТОЛКОВ</p>
+                </div>
+            </div>
+            <a 
+                href="tel:+79999999999"
+                className={styles.hero__call_button}
+            >
+                <div className={styles.hero__call_button_inner}>
+                    <svg 
+                        width="24" 
+                        height="24" 
+                        viewBox="0 0 24 24" 
+                        fill="none" 
+                        xmlns="http://www.w3.org/2000/svg"
+                        stroke="currentColor" 
+                        strokeWidth="2" 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round"
+                    >
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                    </svg>
+                </div>
+                <div className={styles.hero__call_button_pulse}></div>
+            </a>
+        </section>
+    );
+};

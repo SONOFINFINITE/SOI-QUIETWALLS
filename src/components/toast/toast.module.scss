@@ -1,0 +1,36 @@
+.toast {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    color: var(--MAIN-WHITE);
+    font-size: 1rem;
+    line-height: 1.5;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    
+    &--success {
+        background-color: #22c55e;
+    }
+    
+    &--error {
+        background-color: #ef4444;
+    }
+    
+    &--visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    &__icon {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+}

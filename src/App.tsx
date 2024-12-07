@@ -1,30 +1,40 @@
-import styles from './App.module.scss';
-import ViteSvg from './assets/vite.svg';
-import TypescriptSvg from './assets/typescript.svg';
+import React from 'react';
+import { Home } from './pages/home/home';
+import { PartnerModal } from './components/partner-modal/partner-modal';
+import { ToastContainer, ToastContainerRef, setToastContainer } from './components/toast-container/toast-container';
 
 function App() {
+    const [isPartnerModalOpen, setIsPartnerModalOpen] = React.useState(false);
+    const [isConsultModalOpen, setIsConsultModalOpen] = React.useState(false);
+    const toastContainerRef = React.useRef<ToastContainerRef>(null);
+
+    React.useEffect(() => {
+        if (toastContainerRef.current) {
+            setToastContainer(toastContainerRef.current);
+        }
+    }, []);
+
     return (
-        <div className={styles.App}>
-            <h2>Welcome to your App Component 🎉</h2>
-            <span>
-                Double click to edit App component
-                <br />
-                &amp; drag here elements from + Add <b>Elements</b> Panel
-            </span>
-            <p
-                style={{
-                    fontSize: '12px',
-                    marginTop: '80px',
-                    display: 'flex',
-                    gap: '3px',
-                    justifyContent: 'center',
-                }}
-            >
-                This project is using <img src={ViteSvg} width="12" />+
-                <img src={TypescriptSvg} width="12" />
-                Visit vitejs.dev to learn more.
-            </p>
-        </div>
+        <>
+            <Home />
+            <PartnerModal 
+                isOpen={isPartnerModalOpen}
+                onClose={() => setIsPartnerModalOpen(false)}
+                submitButtonText="Стать партнёром"
+                title="Стать партнёром"
+                description="Оставьте контактные данные, мы свяжемся с вами и расскажем подробнее об условиях сотрудничества"
+                type="partner"
+            />
+            <PartnerModal 
+                isOpen={isConsultModalOpen}
+                onClose={() => setIsConsultModalOpen(false)}
+                submitButtonText="Получить консультацию"
+                title="Остались вопросы?"
+                description="Оставьте контактные данные, мы перезвоним вам и проконсультируем по любому вопросу"
+                type="consultation"
+            />
+            <ToastContainer ref={toastContainerRef} />
+        </>
     );
 }
 

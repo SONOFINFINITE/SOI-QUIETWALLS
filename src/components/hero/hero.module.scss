@@ -1,0 +1,239 @@
+
+
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.hero__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, 
+        rgba(0, 0, 0, 0.6) 0%,
+        rgba(0, 0, 0, 0.4) 50%,
+        rgba(0, 0, 0, 0.6) 100%
+    );
+    z-index: -1;
+}
+
+.hero__content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.hero__text_container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero__text_block {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 20px 0;
+}
+
+.hero__main-text-lead {
+    color: var(--MAIN-WHITE);
+    font-size: clamp(80px, 9vw, 200px);
+    font-weight: 900;
+    line-height: 0.85;
+    margin: 0;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+}
+
+.hero__prefix {
+    color: var(--MAIN-WHITE);
+    font-size: clamp(14px, 1.2vw, 18px);
+    font-weight: 200;
+    letter-spacing: 0.15em;
+    margin: 0;
+    position: relative;
+    text-align: left;
+    padding-left: 5%;
+}
+
+.hero__postfix {
+    color: var(--MAIN-WHITE);
+    font-size: clamp(14px, 1.2vw, 18px);
+    font-weight: 200;
+    letter-spacing: 0.15em;
+    margin: 0;
+    position: relative;
+    text-align: right;
+    padding-right: 5%;
+}
+
+// Медиа-запросы для адаптивности
+@media screen and (max-width: 768px) {
+    .hero__content-wrapper {
+        padding: 0 20px;
+    }
+
+    .hero__text_block {
+        margin: 15px 0;
+    }
+
+    .hero__main-text-lead {
+        font-size: clamp(60px, 12vw, 120px);
+    }
+
+    .hero__prefix,
+    .hero__postfix {
+        font-size: 12px;
+        letter-spacing: 0.1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero__content-wrapper {
+        padding: 0 15px;
+    }
+
+    .hero__text_block {
+        margin: 10px 0;
+    }
+
+    .hero__main-text-lead {
+        font-size: clamp(40px, 10vw, 80px);
+    }
+
+    .hero__prefix,
+    .hero__postfix {
+        font-size: 10px;
+        letter-spacing: 0.08em;
+    }
+
+    .hero__prefix {
+        padding-left: 2%;
+    }
+
+    .hero__postfix {
+        padding-right: 2%;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.hero__call_button {
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+    width: 60px;
+    height: 60px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    z-index: 100;
+    padding: 0;
+
+    &:hover {
+        .hero__call_button_inner {
+            background-color: var(--MAIN-THEME-COL);
+            transform: scale(1.1);
+        }
+        .hero__call_button_pulse {
+            animation: none;
+        }
+    }
+}
+
+.hero__call_button_inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--MAIN-WHITE);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 2;
+
+    svg {
+        width: 24px;
+        height: 24px;
+        color: var(--MAIN-BLACK);
+    }
+}
+
+.hero__call_button_pulse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--MAIN-WHITE);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+    z-index: 1;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--MAIN-WHITE);
+        border-radius: 50%;
+        animation: pulse 2s infinite 0.3s;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero__call_button {
+        bottom: 30px;
+        left: 30px;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero__call_button {
+        bottom: 20px;
+        left: 20px;
+        width: 45px;
+        height: 45px;
+    }
+}
