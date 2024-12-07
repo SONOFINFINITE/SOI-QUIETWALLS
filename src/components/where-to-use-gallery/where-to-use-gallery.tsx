@@ -119,7 +119,7 @@ export const WhereToUseGallery: FC<WhereToUseGalleryProps> = ({ className }) => 
     };
 
     return (
-        <section className={classNames(styles.root, className)}>
+        <section id='where-to-use' className={classNames(styles.root, className)}>
             <div className={styles.wtug}>
                 <div className={styles.wtug__content}>
                     <p className={styles['wtug__section-prefix']}>Применение</p>

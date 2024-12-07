@@ -47,17 +47,17 @@ export const DrawerMenu: React.FC<DrawerMenuProps> = ({ isOpen, onClose }) => {
                             }}>Почему мы</a>
                         </li>
                         <li>
-                            <a href="#flipping" onClick={(e) => {
+                            <a href="#where-to-use" onClick={(e) => {
                                 e.preventDefault();
                                 onClose();
-                                document.querySelector('#flipping')?.scrollIntoView({ behavior: 'smooth' });
+                                document.querySelector('#where-to-use')?.scrollIntoView({ behavior: 'smooth' });
                             }}>Применение</a>
                         </li>
                         <li>
-                            <a href="#prices" onClick={(e) => {
+                            <a href="#setup" onClick={(e) => {
                                 e.preventDefault();
                                 onClose();
-                                document.querySelector('#prices')?.scrollIntoView({ behavior: 'smooth' });
+                                document.querySelector('#setup')?.scrollIntoView({ behavior: 'smooth' });
                             }}>Установка</a>
                         </li>
                         <li>
