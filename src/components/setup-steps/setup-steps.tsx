@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, useEffect, useState, useRef } from 'react';
 import classNames from 'classnames';
 import styles from './setup-steps.module.scss';
 import { useInView } from 'react-intersection-observer';
@@ -57,23 +57,62 @@ const steps: Step[] = [
  */
 export const SetupSteps: FC<SetupStepsProps> = ({ className }) => {
     const [activeStep, setActiveStep] = useState(0);
+    const [maxReachedStep, setMaxReachedStep] = useState(0);
+    const elementRef = useRef<HTMLDivElement | null>(null);
     const { ref, inView } = useInView({
         threshold: 0.2,
         triggerOnce: true
     });
 
+    const handleScroll = () => {
+        const element = elementRef.current;
+        if (!element || window.innerWidth <= 1024) return;
+
+        const rect = element.getBoundingClientRect();
+        const scrollPercentage = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
+        const stepProgress = Math.min(Math.max(scrollPercentage, 0), 1);
+        const currentStep = Math.floor(stepProgress * steps.length);
+        const newStep = Math.min(currentStep, steps.length - 1);
+        
+        // Обновляем максимально достигнутый шаг
+        if (newStep > maxReachedStep) {
+            setMaxReachedStep(newStep);
+        }
+        
+        // Устанавливаем активный шаг не меньше максимально достигнутого
+        setActiveStep(Math.max(newStep, maxReachedStep));
+    };
+
     useEffect(() => {
         if (inView) {
-            const interval = setInterval(() => {
-                setActiveStep((prev) => (prev < steps.length - 1 ? prev + 1 : prev));
-            }, 2000);
-
-            return () => clearInterval(interval);
+            if (window.innerWidth <= 1024) {
+                // Автоматическая анимация для мобильных
+                const interval = setInterval(() => {
+                    setActiveStep((prev) => {
+                        const newStep = prev < steps.length - 1 ? prev + 1 : prev;
+                        setMaxReachedStep(Math.max(maxReachedStep, newStep));
+                        return newStep;
+                    });
+                }, 2000);
+                return () => clearInterval(interval);
+            } else {
+                // Анимация по скроллу для десктопа
+                window.addEventListener('scroll', handleScroll);
+                handleScroll(); // Инициализация при первом рендере
+                return () => window.removeEventListener('scroll', handleScroll);
+            }
         }
-    }, [inView]);
+    }, [inView, maxReachedStep]);
 
     return (
-        <div id="flipping" className={classNames(styles.root, className)} ref={ref}>
+        <div 
+            id="setup" 
+            className={classNames(styles.root, className)} 
+            ref={(node) => {
+                elementRef.current = node;
+                ref(node);
+            }}
+        >
             <div className={styles.ss__content}>
                 <p className={styles['ss__section-prefix']}>Как это работает? </p>
                 <h2 className={styles['ss__section-heading']}>Установка Тихих стен</h2>
