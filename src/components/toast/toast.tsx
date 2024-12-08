@@ -22,7 +22,7 @@ export const Toast: FC<ToastProps> = ({
         setIsVisible(true);
         const timer = setTimeout(() => {
             setIsVisible(false);
-            setTimeout(onClose, 300); // Ждем окончания анимации
+            setTimeout(onClose, 300); 
         }, duration);
 
         return () => clearTimeout(timer);

@@ -7,6 +7,7 @@ import { SetupSteps } from '../../components/setup-steps/setup-steps';
 import { Functionality } from '../../components/functionality/functionality';
 import { Faq } from '../../components/faq/faq';
 import { Footer } from '../../components/footer/footer';
+import { Seo } from '../../components/seo/Seo';
 
 export interface HomeProps {
     className?: string;
@@ -25,6 +26,7 @@ export const Home = ({ className }: HomeProps) => {
             <SetupSteps />
             <Functionality />
             <Faq />
+            <Seo />
             <Footer />
         </div>
     );

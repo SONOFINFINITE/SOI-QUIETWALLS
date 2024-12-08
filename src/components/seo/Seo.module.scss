@@ -1,0 +1,185 @@
+.seo {
+    width: 100%;
+    background-color: var(--MAIN-BLACK);
+    padding-right: 0;
+    padding-bottom: 30px;
+    padding-left: 0;
+    padding-top: 64px;
+
+}
+
+.heroImage {
+    width: 100%;
+    height: 80vh;
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+    background-image: url('../../assets/OAKAME_belgique_produit-6-min-1-1200x840.jpg');
+    background-position: 50%;
+    background-size: cover;
+    background-attachment: scroll;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-color: transparent;
+}
+
+.container {
+    max-width: var(--DESKTOP-MAX-WIDTH);
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.seo__prefix {
+    color: var(--MAIN-THEME-COL);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: var(--DESKTOP-FS-ACCENT);
+    font-weight: 500;
+}
+
+.title {
+    font-size: var(--DESKTOP-H2);
+    margin-bottom: 30px;
+    color: var(--MAIN-WHITE);
+    text-transform: uppercase;
+    font-weight: 900;
+    width: fit-content;
+    letter-spacing: 1px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--DESKTOP-2X-PADDING);
+    margin-bottom: var(--DESKTOP-2X-MARGIN);
+}
+
+.column {
+    p {
+        font-size: var(--DESKTOP-FS-MAIN);
+        line-height: 1.6;
+        color: var(--MAIN-GRAY);
+        margin-bottom: var(--DESKTOP-MARGIN);
+        text-align: justify;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.contact {
+    border-top: 1px solid rgba(200, 200, 210, 0.1);
+
+    p {
+        font-size: var(--DESKTOP-FS-MAIN);
+        line-height: 1.6;
+        color: var(--MAIN-GRAY);
+        max-width: 800px;
+        text-align: justify;
+    }
+
+    a {
+        color: var(--MAIN-THEME-COL);
+        font-weight: 500;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: var(--MAIN-WHITE);
+        }
+    }
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+    .heroImage {
+        height: 60vh;
+    }
+
+    .title {
+        font-size: calc(var(--DESKTOP-H2) * 0.8);
+    }
+
+    .content {
+        gap: var(--MOBILE-2X-PADDING);
+    }
+
+    .column p {
+        font-size: calc(var(--DESKTOP-FS-MAIN) * 0.9);
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .seo {
+        padding: 0.9rem;
+    }
+    
+    .heroImage {
+        height: 50vh;
+        margin-bottom: 20px;
+    }
+
+    .title {
+        font-size: var(--MOBILE-FS-ALT-1ANDHALFX);
+        margin-bottom: 20px;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+        gap: var(--MOBILE-MARGIN);
+    }
+
+    .column p {
+        font-size: var(--MOBILE-FS-MAIN);
+        margin-bottom: var(--MOBILE-MARGIN);
+    }
+
+    .seo__prefix {
+        font-size: calc(var(--DESKTOP-FS-ACCENT) * 0.9);
+        margin-bottom: 10px;
+    }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 375px) {
+    .seo {
+        padding-bottom: 30px;
+
+    }
+
+    .heroImage {
+        height: 40vh;
+        margin-bottom: 15px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .title {
+        font-size: calc(var(--MOBILE-FS-ALT-1ANDHALFX) * 0.9);
+        margin-bottom: 15px;
+    }
+
+    .content {
+        gap: 15px;
+    }
+
+    .column p {
+        font-size: calc(var(--MOBILE-FS-MAIN) * 0.95);
+        margin-bottom: 15px;
+        line-height: 1.5;
+    }
+
+    .seo__prefix {
+        font-size: var(--DESKTOP-FS-ACCENT);
+        margin-bottom: 8px;
+        letter-spacing: 1.5px;
+    }
+}
