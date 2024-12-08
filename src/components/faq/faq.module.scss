@@ -22,7 +22,6 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
     @media (max-width: 768px) {
         padding: 1rem 0.16rem;
     }
@@ -35,7 +34,7 @@
     color: var(--MAIN-THEME-COL);
     margin: 0;
     margin-bottom: 0.5rem;
-    font-weight: 900;
+    font-weight: 500;
     letter-spacing: 0.05em;
 }
 
@@ -46,7 +45,6 @@
     font-weight: 900;
     line-height: 1.2;
     text-transform: uppercase;
-    text-align: center;
 
     @media (max-width: 768px) {
         font-size: 2rem;
