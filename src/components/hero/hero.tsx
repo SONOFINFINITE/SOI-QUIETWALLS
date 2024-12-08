@@ -1,7 +1,8 @@
 import classNames from 'classnames';
 import styles from './hero.module.scss';
 import { Header } from '../header/header';
-import backgroundVideo from '../../assets/tbs_Homepage_header_lores.mov';
+import backgroundVideoMov from '../../assets/tbs_Homepage_header_lores.mov';
+import backgroundVideoMp4 from '../../assets/tbs_Homepage_header_lores--online-audio-convert.com.mp4';
 import { useEffect, useRef } from 'react';
 
 export interface HeroProps {
@@ -29,9 +30,12 @@ export const Hero = ({ className }: HeroProps) => {
                 muted
                 loop
                 playsInline
-                src={backgroundVideo}
                 onError={(e) => console.error('Video error:', e)}
-            />
+            >
+                <source src={backgroundVideoMp4} type="video/mp4" />
+                <source src={backgroundVideoMov} type="video/quicktime" />
+                Your browser does not support the video tag.
+            </video>
             <div className={styles.hero__overlay}></div>
             <Header />
             <div className={styles['hero__content-wrapper']}>
