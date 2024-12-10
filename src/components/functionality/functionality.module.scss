@@ -20,8 +20,11 @@
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 2rem;
 
+    @media screen and (max-width: 825px) {
+        padding: 0;
+        
+    }
     @media (max-width: 768px) {
         padding: 0px;
     }
@@ -124,7 +127,6 @@
     @media (max-width: 820px) {
         flex-direction: column !important;
         gap: 2rem;
-        max-width: 600px;
         margin: 0 auto;
 
         img {
@@ -226,7 +228,6 @@
 
     @media (max-width: 820px) {
         font-size: 1rem;
-        max-width: 600px;
         margin: 0 auto;
     }
 

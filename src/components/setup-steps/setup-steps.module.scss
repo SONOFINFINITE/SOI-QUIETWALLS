@@ -6,7 +6,7 @@
     padding-right: 2rem;
     padding-bottom: 0.5rem;
     padding-left: 2rem;
-    padding-top: 4rem;
+    padding-top: 2rem;
     box-sizing: border-box;
     overflow-x: hidden;
 
@@ -224,7 +224,7 @@
     padding: 0 2rem;
     margin-bottom: 2rem;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
         margin-bottom: 1.5rem;
         padding: 0;
     }

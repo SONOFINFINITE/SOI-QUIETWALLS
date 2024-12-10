@@ -13,6 +13,10 @@
     justify-content: center;
     margin: 0 auto;
     background-color: var(--MAIN-BLACK);
+    @media screen and (max-width: 1024px) {
+        padding: 0 0.2rem;
+        
+    }
 }
 .wqw__section-heading {
     color: var(--ALT-WHITE);
@@ -172,15 +176,13 @@
     width: fit-content;
 }
 @media screen and (max-width: 768px) {
+    .wqw__content-wrapper {
+        padding: 0 1rem;
+    }
     .wqw__section-heading {
         margin-bottom: 2rem;
         font-size: 2rem;
     }
-}
-
-
-.wqw__content-wrapper {
-    padding: 0 1rem;
 }
 
 .wqw__card {

@@ -97,6 +97,10 @@
 
 /* Tablet Styles */
 @media (max-width: 1024px) {
+    .seo {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
     .heroImage {
         height: 60vh;
     }
@@ -113,11 +117,17 @@
         font-size: calc(var(--DESKTOP-FS-MAIN) * 0.9);
     }
 }
-
+@media screen and (max-width: 840px) {
+    .seo {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+}
 /* Mobile Styles */
 @media (max-width: 768px) {
     .seo {
-        padding: 0.9rem;
+        padding: 1rem;
     }
     
     .heroImage {
