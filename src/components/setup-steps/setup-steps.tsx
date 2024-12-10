@@ -66,7 +66,7 @@ export const SetupSteps: FC<SetupStepsProps> = ({ className }) => {
 
     const handleScroll = () => {
         const element = elementRef.current;
-        if (!element || window.innerWidth <= 1024) return;
+        if (!element || window.innerWidth <= 350) return;
 
         const rect = element.getBoundingClientRect();
         const scrollPercentage = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
