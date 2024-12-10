@@ -85,7 +85,7 @@ export const SetupSteps: FC<SetupStepsProps> = ({ className }) => {
 
     useEffect(() => {
         if (inView) {
-            if (window.innerWidth <= 1024) {
+            if (window.innerWidth <= 350) {
                 // Автоматическая анимация для мобильных
                 const interval = setInterval(() => {
                     setActiveStep((prev) => {
