@@ -41,7 +41,6 @@ export const Hero = ({ className }: HeroProps) => {
                 <div className={styles.hero__text_container}>
                     <div className={styles.div1}>
                         <div className={styles['hero__advtg-wrapper']}>
-                            <span style={{ fontWeight: '300', fontSize: '12px', letterSpacing: '1px', color: '#ffffff' }}>БОЛЬШОЕ</span>
                             <p className={styles['advantage-text']}>ПРЕИМУЩЕСТВО</p>
                         </div>
                         <span className={styles.span1}>|</span>
