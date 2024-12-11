@@ -5,7 +5,7 @@ export default createBoard({
     name: 'Hero',
     Board: () => <Hero />,
     environmentProps: {
-        windowWidth: 390,
-        windowHeight: 844
+        windowWidth: 1920,
+        windowHeight: 1080
     }
 });

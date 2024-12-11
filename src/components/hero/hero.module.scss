@@ -1,5 +1,3 @@
-
-
 .hero {
     position: relative;
     height: 100vh;
@@ -25,11 +23,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, 
-        rgba(0, 0, 0, 0.6) 0%,
-        rgba(0, 0, 0, 0.4) 50%,
-        rgba(0, 0, 0, 0.6) 100%
-    );
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.6) 100%);
     z-index: -1;
 }
 
@@ -123,7 +117,7 @@
     }
 
     .hero__main-text-lead {
-        font-size: clamp(40px, 10vw, 80px);
+        font-size: clamp(46px, 10vw, 80px);
     }
 
     .hero__prefix,
@@ -229,11 +223,85 @@
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 490px) {
     .hero__call_button {
         bottom: 20px;
         left: 20px;
         width: 45px;
         height: 45px;
     }
+}
+.hero__advtg-wrapper {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.advng__speed {
+    width: 140px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    height: 30px;
+    gap: 10px;
+
+    @media screen and (max-width: 490px) {
+        width: 120px;
+    }
+    color: var(--MAIN-WHITE);
+}
+
+.advtg__description {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 14px;
+
+    @media screen and (max-width: 490px) {
+        font-size: 12px;
+    }
+}
+.div1 {
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 120px;
+
+    @media screen and (max-width: 490px) {
+        margin-bottom: 40px;
+    }
+}
+.detail__descr {
+    width: fit-content;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    color: var(--MAIN-WHITE);
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 1px;
+    @media screen and (max-width: 490px) {
+        font-size: 12px;
+    }
+    font-size: 12px;
+}
+.span1 {
+    font-size: 36px;
+    color: var(--MAIN-WHITE);
+    font-weight: 200;
+}
+.div2 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.advantage-text {
+    color: var(--MAIN-WHITE);
+    font-weight: 900;
+    font-size: 14px;
 }
