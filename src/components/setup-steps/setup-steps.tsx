@@ -19,7 +19,7 @@ const steps: Step[] = [
     {
         number: '01',
         title: 'ЗАМЕР',
-        description: 'Выезд технического специалиста, консультация и подбор текстиля для ваших целей'
+        description: 'Консультация специалиста и подбор текстиля для ваших целей, после выявления вашей потребности выезд на замер.'
     },
     {
         number: '02',
@@ -115,7 +115,7 @@ export const SetupSteps: FC<SetupStepsProps> = ({ className }) => {
         >
             <div className={styles.ss__content}>
                 <p className={styles['ss__section-prefix']}>Как это работает? </p>
-                <h2 className={styles['ss__section-heading']}>Установка Тихих стен</h2>
+                <h2 className={styles['ss__section-heading']}>Реализация Тихих стен</h2>
             </div>
             <div className={styles.timeline}>
                 <div

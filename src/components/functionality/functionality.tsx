@@ -13,14 +13,12 @@ export const Functionality = ({ className }: FunctionalityProps) => {
     const [ref4, inView4] = useInView({ threshold: 0.3, triggerOnce: true });
     const [ref5, inView5] = useInView({ threshold: 0.3, triggerOnce: true });
     const [ref6, inView6] = useInView({ threshold: 0.3, triggerOnce: true });
-    const [ref7, inView7] = useInView({ threshold: 0.3, triggerOnce: true });
-    const [ref8, inView8] = useInView({ threshold: 0.3, triggerOnce: true });
 
     return (
         <div id="portfolio" className={classNames(styles.root, className)}>
             <div className={styles['func__content-wrapper']}>
                 <p className={styles['__section-prefix']}>Функционал</p>
-                <h2 className={styles['__section-heading']}>Система Тихие стены решает множество задач</h2>
+                <h2 className={styles['__section-heading']}>Тихие стены решают множество задач</h2>
                 <div className={styles['func__articles-wrapper']}>
                     <div
                         ref={ref1}

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import classNames from 'classnames';
 import styles from './footer.module.scss';
 import { PartnerModal } from '../partner-modal/partner-modal';
+import LOGO from '../../assets/LOGO-woutBG.png';
 
 export interface FooterProps {
     className?: string;
@@ -21,9 +22,9 @@ export const Footer: React.FC<FooterProps> = ({ className }) => {
             <div className={styles.footer__wrapper}>
                 <div className={styles.div2}>
                     <img
-                        src="https://xn--e1aaha1awdex0e.xn--p1ai/wp-content/uploads/2023/08/logo_white.svg"
-                        width="73"
-                        height="84"
+                        src={LOGO}
+                        width="112"
+                        height="123"
                         alt="Silent Walls"
                         className={styles.footer__logo}
                     />

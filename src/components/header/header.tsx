@@ -2,6 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import styles from './header.module.scss';
 import { DrawerMenu } from '../drawer-menu/drawer-menu';
+import LOGO from '../../assets/LOGO-woutBG.png';
 
 export interface HeaderProps {
     className?: string;
@@ -65,9 +66,9 @@ export const Header: React.FC<HeaderProps> = ({ className }: HeaderProps) => {
             })}>
                 <div className={styles.header__wrapper}>
                     <img
-                        src="https://xn--e1aaha1awdex0e.xn--p1ai/wp-content/uploads/2023/08/logo_white.svg"
-                        width="73"
-                        height="84"
+                        src={LOGO}
+                        width="112"
+                        height="123"
                         alt="Обнинск"
                         className={styles.header__logo}
                     />

@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import styles from './drawer-menu.module.scss';
+import LOGO from '../../assets/LOGO-woutBG.png';
 
 export interface DrawerMenuProps {
     isOpen: boolean;
@@ -14,9 +15,9 @@ export const DrawerMenu: React.FC<DrawerMenuProps> = ({ isOpen, onClose }) => {
             <div className={styles.drawer__content}>
                 <div className={styles.drawer__header}>
                     <img
-                        src="https://xn--e1aaha1awdex0e.xn--p1ai/wp-content/uploads/2023/08/logo_white.svg"
-                        width="41"
-                        height="47"
+                        src={LOGO}
+                        width="71"
+                        height="77"
                         alt="Обнинск"
                         className={styles.drawer__logo}
                     />
