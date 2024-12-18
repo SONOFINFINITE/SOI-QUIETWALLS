@@ -2,7 +2,14 @@ import { FC, useState, useEffect } from 'react';
 import classNames from 'classnames';
 import styles from './where-to-use-gallery.module.scss';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
-import placeholderImage from '../../assets/01.webp';
+import kvartiraImg from '../../assets/kvartira.jpg';
+import otelImg from '../../assets/otel.png';
+import spalnyaImg from '../../assets/spalnya.jpg';
+import kabinetImg from '../../assets/kabinet.jpeg';
+import koridorImg from '../../assets/koridor.png';
+import restoranImg from '../../assets/restaran.jpeg';
+import konfzalImg from '../../assets/konfzal.jpg';
+import kinoteatrImg from '../../assets/kinoteatr.jpg';
 
 export interface WhereToUseGalleryProps {
     className?: string;
@@ -12,38 +19,57 @@ interface SlideData {
     id: number;
     title: string;
     link: string;
+    backgroundImage?: string;
 }
 
 const slides: SlideData[] = [
     {
         id: 1,
         title: 'КВАРТИРА',
-        link: '#'
+        link: '#',
+        backgroundImage: kvartiraImg
     },
     {
         id: 2,
-        title: 'ОФИСЫ И ОТЕЛИ',
-        link: '#'
+        title: 'ОТЕЛЬ',
+        link: '#',
+        backgroundImage: otelImg
     },
     {
         id: 3,
-        title: 'СТУДИЯ ЗВУКОЗАПИСИ',
-        link: '#'
+        title: 'СПАЛЬНЯ',
+        link: '#',
+        backgroundImage: spalnyaImg
     },
     {
         id: 4,
-        title: 'СПОРТЗАЛ',
-        link: '#'
+        title: 'КАБИНЕТ',
+        link: '#',
+        backgroundImage: kabinetImg
     },
     {
         id: 5,
-        title: 'КИНОТЕАТР',
-        link: '#'
+        title: 'КОРИДОР',
+        link: '#',
+        backgroundImage: koridorImg
     },
     {
         id: 6,
         title: 'РЕСТОРАН',
-        link: '#'
+        link: '#',
+        backgroundImage: restoranImg
+    },
+    {
+        id  : 7,
+        title: 'КОНФЕРЕНЦ-ЗАЛ',
+        link: '#',
+        backgroundImage: konfzalImg
+    },
+    {
+        id  : 8,
+        title: 'КИНОТЕАТР',
+        link: '#',
+        backgroundImage: kinoteatrImg
     }
 ];
 
@@ -152,7 +178,7 @@ export const WhereToUseGallery: FC<WhereToUseGalleryProps> = ({ className }) => 
                                     })}
                                 >
                                     <div className={styles['wtug__slide-image']}>
-                                        <img src={placeholderImage} alt={slide.title} />
+                                        <img src={slide.backgroundImage} alt={slide.title} />
                                         <div className={styles['wtug__slide-content']}>
                                             <p className={styles['wtug__slide-title']}>
                                                 {slide.title}

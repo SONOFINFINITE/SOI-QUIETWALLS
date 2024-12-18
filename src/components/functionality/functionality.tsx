@@ -1,6 +1,12 @@
 import classNames from 'classnames';
 import styles from './functionality.module.scss';
 import { useInView } from 'react-intersection-observer';
+import audiosystImg from '../../assets/audiosist_raskr.jpg';
+import skrytySvetImg from '../../assets/srytySvet.jpg';
+import akustikaImg from '../../assets/akustika.jpg';
+import rospisImg from '../../assets/rospis.jpg';
+import izolImg from '../../assets/izol.jpg';
+import stenyipotolokImg from '../../assets/stenypotolok.jpg';
 
 export interface FunctionalityProps {
     className?: string;
@@ -37,7 +43,7 @@ export const Functionality = ({ className }: FunctionalityProps) => {
                             </p>
                         </div>
                         <img
-                            src="https://static.wixstatic.com/media/11062b_25e218a68cae48e98a21198d1280a6bd~mv2.jpg/v1/fill/w_600,h_399,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_25e218a68cae48e98a21198d1280a6bd~mv2.jpg"
+                            src={audiosystImg}
                             alt="Аудиосистема в действии"
                             loading="lazy"
                         />
@@ -49,7 +55,7 @@ export const Functionality = ({ className }: FunctionalityProps) => {
                         })}
                     >
                         <img
-                            src="https://static.wixstatic.com/media/11062b_25e218a68cae48e98a21198d1280a6bd~mv2.jpg/v1/fill/w_600,h_399,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_25e218a68cae48e98a21198d1280a6bd~mv2.jpg"
+                            src={akustikaImg}
                             alt="Акустическое оформление"
                             loading="lazy"
                         />
@@ -75,7 +81,7 @@ export const Functionality = ({ className }: FunctionalityProps) => {
                             </p>
                         </div>
                         <img
-                            src="https://static.wixstatic.com/media/11062b_25e218a68cae48e98a21198d1280a6bd~mv2.jpg/v1/fill/w_600,h_399,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_25e218a68cae48e98a21198d1280a6bd~mv2.jpg"
+                            src={izolImg}
                             alt="Шумоизоляционная система"
                             loading="lazy"
                         />
@@ -87,7 +93,7 @@ export const Functionality = ({ className }: FunctionalityProps) => {
                         })}
                     >
                         <img
-                            src="https://static.wixstatic.com/media/11062b_25e218a68cae48e98a21198d1280a6bd~mv2.jpg/v1/fill/w_600,h_399,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_25e218a68cae48e98a21198d1280a6bd~mv2.jpg"
+                            src={skrytySvetImg}
                             alt="Скрытый свет"
                             loading="lazy"
                         />
@@ -113,7 +119,7 @@ export const Functionality = ({ className }: FunctionalityProps) => {
                             </p>
                         </div>
                         <img
-                            src="https://static.wixstatic.com/media/11062b_25e218a68cae48e98a21198d1280a6bd~mv2.jpg/v1/fill/w_600,h_399,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_25e218a68cae48e98a21198d1280a6bd~mv2.jpg"
+                            src={rospisImg}
                             alt="Фотопечать"
                             loading="lazy"
                         />
@@ -125,7 +131,7 @@ export const Functionality = ({ className }: FunctionalityProps) => {
                         })}
                     >
                         <img
-                            src="https://static.wixstatic.com/media/11062b_25e218a68cae48e98a21198d1280a6bd~mv2.jpg/v1/fill/w_600,h_399,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_25e218a68cae48e98a21198d1280a6bd~mv2.jpg"
+                            src={stenyipotolokImg}
                             alt="Объединение стен и потолка"
                             loading="lazy"
                         />
