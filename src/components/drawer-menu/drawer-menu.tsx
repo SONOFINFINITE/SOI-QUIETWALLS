@@ -108,7 +108,7 @@ export const DrawerMenu: React.FC<DrawerMenuProps> = ({ isOpen, onClose }) => {
                                 <a href="https://t.me/Obninsktihiestenirf" target="_blank" rel="noopener noreferrer">
                                     <div className={styles.tg} />
                                 </a>
-                                <a href="https://wa.me/89533331211" target="_blank" rel="noopener noreferrer">
+                                <a href="https://wa.me/+79533331211" target="_blank" rel="noopener noreferrer">
                                     <div className={styles.vk} />
                                 </a>
                                 <a href="#" target="_blank" rel="noopener noreferrer">
