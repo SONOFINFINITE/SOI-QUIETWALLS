@@ -1,7 +1,6 @@
 import classNames from 'classnames';
 import styles from './hero.module.scss';
 import { Header } from '../header/header';
-import backgroundVideoMov from '../../assets/tbs_Homepage_header_lores.mov';
 import backgroundVideoMp4 from '../../assets/tbs_Homepage_header_lores--online-audio-convert.com.mp4';
 import { useEffect, useRef } from 'react';
 
@@ -72,7 +71,7 @@ export const Hero = ({ className }: HeroProps) => {
                     <p className={styles.hero__postfix}>ДЛЯ ФИНИШНОЙ ОТДЕЛКИ СТЕН И ПОТОЛКОВ</p>
                 </div>
             </div>
-            <a href="tel:+79999999999" className={styles.hero__call_button}>
+            <a href="tel:+79533331211" className={styles.hero__call_button}>
                 <div className={styles.hero__call_button_inner}>
                     <svg
                         width="24"

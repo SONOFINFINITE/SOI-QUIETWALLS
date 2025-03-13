@@ -8,6 +8,7 @@ import { Functionality } from '../../components/functionality/functionality';
 import { Faq } from '../../components/faq/faq';
 import { Footer } from '../../components/footer/footer';
 import { Seo } from '../../components/seo/Seo';
+import { VideoStories } from '../../components/video-stories/video-stories';
 
 export interface HomeProps {
     className?: string;
@@ -27,6 +28,7 @@ export const Home = ({ className }: HomeProps) => {
             <Functionality />
             <Faq />
             <Seo />
+            <VideoStories />
             <Footer />
         </div>
     );

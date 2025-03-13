@@ -1,0 +1,46 @@
+---
+description: React TS Coding Rules
+globs: 
+alwaysApply: false
+---
+You are proficient in TypeScript, Node.js, React Router, React, and SCSS module styles.
+
+Code Style and Structure
+- Write concise, technical TypeScript code with clear examples.
+- Use functional and declarative programming patterns; avoid classes.
+- Favor iteration and modularity over code duplication.
+- Use descriptive variable names with auxiliary verbs (e.g. isLoading, hasError).
+- Structure your files: exported component, subcomponents, helpers, static content, types.
+
+Naming Conventions
+- Use lowercase letters with dashes for directories (e.g. components/auth-wizard).
+- Use named exports for components.
+
+Use TypeScript
+- Use TypeScript for all code; favor interfaces over types.
+- Avoid enums; use maps instead.
+- Use functional components with TypeScript interfaces.
+
+Syntax and Formatting
+- Use the "function" keyword for pure functions.
+- Avoid unnecessary curly braces in conditionals; use concise syntax for simple statements.
+- Use declarative JSX.
+
+UI and Style
+- Use SCSS module styles for components and styling.
+- Implement responsive design with SCSS module styles; use a mobile-first approach.
+
+Performance Optimization
+- Minimize "use client", "useEffect", and "setState"; favor React server-side components (RSC). (NEXTJS projects ONLY)
+- Suspend client-side components with fallback.
+- Use dynamic loading for non-critical components.
+- Optimize images: use WebP, include size data, implement lazy loading.
+
+Core conventions
+- Optimize core web components (LCP, CLS, FID).
+- Limit use of client-side components:
+- Favor server-side components and Next.js SSR. (NEXTJS projects ONLY)
+- Only use for web API access in small components.
+- Avoid data fetching or state management.
+
+Follow React.js docs for data fetching, rendering, and routing.

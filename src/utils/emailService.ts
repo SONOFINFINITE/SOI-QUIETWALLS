@@ -5,14 +5,14 @@ interface EmailData {
 }
 
 // Активируйте свой email, перейдя по этой ссылке один раз:
-// https://formsubmit.co/activate/ksmirnov23@gmail.com
+// https://formsubmit.co/activate/sales@тихиестены40.рф
 
-const FORM_ENDPOINT = 'https://formsubmit.co/ajax/ksmirnov23@gmail.com';
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/sales@тихиестены40.рф';
 
 export const sendEmail = async (data: EmailData) => {
     try {
         console.log('Sending data:', data);
-        console.log('Form type:', data.type); // Добавляем лог для отладки
+        console.log('Form type:', data.type);
 
         const response = await fetch(FORM_ENDPOINT, {
             method: 'POST',

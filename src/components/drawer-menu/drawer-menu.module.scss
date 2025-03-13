@@ -195,22 +195,10 @@
     width: 36px;
     height: 36px;
     background-repeat: no-repeat;
-    background-image: url('../../assets/vk.svg');
+    background-size: cover;
+    background-image: url('../../assets/icons8-whatsapp.svg');
 }
 
-.div1 {
-    width: 36px;
-    height: 36px;
-    background-repeat: no-repeat;
-    background-image: url('../../assets/wa.svg');
-}
-
-.yt {
-    width: 36px;
-    height: 36px;
-    background-repeat: no-repeat;
-    background-image: url('../../assets/yt.svg');
-}
 
 .p1 {
     color: var(--MAIN-WHITE);
@@ -222,4 +210,5 @@
 .svg2 {
     width: 36px;
     height: 36px;
+    margin-bottom: 15px;
 }

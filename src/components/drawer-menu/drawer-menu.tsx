@@ -95,17 +95,20 @@ export const DrawerMenu: React.FC<DrawerMenuProps> = ({ isOpen, onClose }) => {
                                     />
                                 </svg>
                                 <div className={styles['contact-content__wrapper']}>
-                                    <a href="tel:+7999999999" className={styles.drawer__phone}>
-                                        +7 999 999 99 99
+                                    <a href="tel:+79533331211" className={styles.drawer__phone}>
+                                    8 953 333 12 11
+                                    </a>
+                                    <a href="tel:+79641407745" className={styles.drawer__phone}>
+                                    8 964 140 77 45 
                                     </a>
                                     <p className={styles.p1}>пн-пт: 9:00-19:00</p>
                                 </div>
                             </div>
                             <div className={styles.div2}>
-                                <a href="#" target="_blank" rel="noopener noreferrer">
+                                <a href="https://t.me/Obninsktihiestenirf" target="_blank" rel="noopener noreferrer">
                                     <div className={styles.tg} />
                                 </a>
-                                <a href="#" target="_blank" rel="noopener noreferrer">
+                                <a href="https://wa.me/89533331211" target="_blank" rel="noopener noreferrer">
                                     <div className={styles.vk} />
                                 </a>
                                 <a href="#" target="_blank" rel="noopener noreferrer">
