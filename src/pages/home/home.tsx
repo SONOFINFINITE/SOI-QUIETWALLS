@@ -9,6 +9,7 @@ import { Faq } from '../../components/faq/faq';
 import { Footer } from '../../components/footer/footer';
 import { Seo } from '../../components/seo/Seo';
 import { VideoStories } from '../../components/video-stories/video-stories';
+import KraabGippsInfo from '../../components/KraabGippsInfo/KraabGippsInfo';
 
 export interface HomeProps {
     className?: string;
@@ -26,6 +27,7 @@ export const Home = ({ className }: HomeProps) => {
             <WhereToUseGallery />
             <SetupSteps />
             <Functionality />
+            <KraabGippsInfo />
             <Faq />
             <Seo />
             <VideoStories />

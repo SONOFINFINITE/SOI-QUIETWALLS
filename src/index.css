@@ -50,6 +50,7 @@
 	margin: 0px;
 	border: none;
   font-family: var(--PRIMARY-FONT);
+  
 }
 
 *,
@@ -139,6 +140,7 @@ legend {
 body {
   scroll-behavior: smooth;
   scroll-snap-type: proximity;
+  background-color: var(--MAIN-BLACK);
   
 }
 
