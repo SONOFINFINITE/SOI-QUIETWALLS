@@ -149,7 +149,7 @@
 .hero__call_button {
     position: fixed;
     bottom: 40px;
-    left: 40px;
+    right: 40px;
     width: 60px;
     height: 60px;
     border: none;
@@ -217,7 +217,7 @@
 @media screen and (max-width: 768px) {
     .hero__call_button {
         bottom: 30px;
-        left: 30px;
+        right: 30px;
         width: 50px;
         height: 50px;
     }
@@ -226,7 +226,7 @@
 @media screen and (max-width: 490px) {
     .hero__call_button {
         bottom: 20px;
-        left: 20px;
+        right: 20px;
         width: 45px;
         height: 45px;
     }
